@@ -45,6 +45,8 @@ class Graph:
                 # compare the new distance and the previously acquired distance
                 if dis + edgeWeight < dist[adjNode]:
                     dist[adjNode] = dis + edgeWeight
+                    # if the new distance is lesser
+                    # store the new distance, and adjacent node into priority queue
                     heapq.heappush(pq, (dist[adjNode], adjNode))
         return dist
 
